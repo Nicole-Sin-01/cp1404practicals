@@ -17,6 +17,7 @@ You can use the functions min, max, sum and len, and you can use the append meth
    The largest number is 20
    The average of the numbers is 6.2
 """
+# 1. Basic list operations
 def main():
     """Main function to run code"""
     numbers = get_numbers()  # Get the list of numbers from the user
@@ -44,3 +45,14 @@ def print_results(numbers):
     print(f"The average of the numbers is {sum(numbers) / len(numbers):.1f}")
 
 main()
+
+#2. Woefully inadequate security checker
+
+usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn',
+             'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
+
+username = input("Enter username:")
+if username in usernames:
+    print("Access granted")
+else:
+    print("Access denied")
