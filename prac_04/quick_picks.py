@@ -1,40 +1,38 @@
-"""
-CP1404/CP5632 Practical
-"Quick Pick" Lottery Ticket Generator
-File: quick_picks.py
-
-Write a program that asks the user how many "quick picks" they wish to generate.
-The program then generates that many lines of output. Each line consists of 6 random numbers between 1 and 45.
-These values should be stored as CONSTANTS.
-
-Each line (quick pick) should not contain any repeated number.
-Each line of numbers should be displayed in sorted (ascending) order.
-Study the formatting below so that numbers align neatly.
-
-Your code should produce output that matches this sample output (except the numbers are random):
-
-How many quick picks? 5
- 1 12 14 15 30 36
- 2  5  8 33 38 41
- 2 12 19 22 29 43
-13 21 28 29 42 43
- 3  4 10 11 32 44
-"""
-
 import random
 
-NUMBERS_PER_PICK = 6
+NUMBERS_PER_LINE = 6
 MINIMUM_NUMBER = 1
 MAXIMUM_NUMBER = 45
 
-def get_valid_pick():
-    """Keeps validating and returns value only when a valid integer is entered."""
+def main():
+    quick_picks_count = get_valid_pick("Enter number of picks:  ")
+
+    for _ in range(quick_picks_count):
+        quick_pick = generate_quick_pick()
+        print(" ".join(f"{number:2}" for number in quick_pick))
+
+def get_valid_pick(prompt):
+    """Keeps validating and returns value only when a valid integer is entered"""
     while True:
         try:
-            value = int(input())
+            value = int(input(prompt))
             if value > 0:
                 return value
             else:
                 print("Please enter a number more than 0.")
         except ValueError:
             print("Invalid input. Try again.")
+
+def generate_quick_pick():
+    """Generate a single row of random numbers"""
+    quick_pick = []
+
+    while len(quick_pick) < NUMBERS_PER_LINE:
+        number = random.randint(MINIMUM_NUMBER, MAXIMUM_NUMBER)
+        if number not in quick_pick:
+            quick_pick.append(number)
+    quick_pick.sort()
+    return quick_pick
+
+if __name__ == "__main__":
+    main()
