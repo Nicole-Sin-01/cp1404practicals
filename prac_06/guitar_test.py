@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical
-Guitar testing - Est. 10 minutes,
+Guitar testing - Est. 10 minutes
 
 Now write a program with at least enough code to test that the last two methods work as expected.
 To test get_age(), you could test that the above example guitar does indeed output 100 as expected. Here's some sample output for testing two guitars where the second is called Another Guitar and has year=2013:
