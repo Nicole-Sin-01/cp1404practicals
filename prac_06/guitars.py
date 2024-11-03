@@ -25,6 +25,7 @@ These are my guitars:
 Guitar 1:       Gibson L-5 CES (1922), worth $ 16,035.40 (vintage)
 Guitar 2:        Line 6 JTV-59 (2010), worth $  1,512.90
 Guitar 3:  Fender Stratocaster (2014), worth $    765.40
+
 Programmer Efficiency Note
 When testing a program like this you can waste a lot of time typing in input... then changing something, running it again and... typing the same thing again...
 So don't do it!
@@ -43,6 +44,7 @@ The sample output uses some nice string formatting. Feel free to try and figure 
 print(f"Guitar {i}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost:10,.2f}{vintage_string}")
 The variable vintage_string is set to "" or " (vintage)" depending on the is_vintage() method.
 If you're keen, try using Python's ternary operator to do this in one line.
+
 E.g., to set the value of category to adult or child depending on age, you could use:
 
 category = "adult" if age >= 18 else "child"
@@ -53,4 +55,29 @@ for i, guitar in enumerate(guitars, 1):
 
 """
 
+from guitar import Guitar
 
+def main():
+    """Store and display user's guitars as a list"""
+    guitars = []
+
+    # User input guitar details
+    print("My guitars!")
+    while True:
+        name = input("Name: ")
+        if not name:
+            break
+        year = int(input("Year: "))
+        cost = float(input("Cost: $"))
+        guitar = Guitar(name, year, cost)
+        guitars.append(guitar)
+        print(f"{guitar} added.\n")
+
+    # Display all guitars with details
+    print("\nThese are my guitars:")
+    for i, guitar in enumerate(guitars, 1):
+        vintage_string = " (vintage)" if guitar.is_vintage() else ""
+        print(f"Guitar {i}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost:10,.2f}{vintage_string}")
+
+if __name__ == "__main__":
+    main()
