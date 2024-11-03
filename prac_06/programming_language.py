@@ -1,8 +1,8 @@
 """
 CP1404/CP5632 Practical
+Class for programming languages - Est. 15 min, Actual: 10 minutes
 
 Define the following methods:
-
 __init__ - like most init functions, create the fields and set them to the parameters passed in.
 
 is_dynamic() - which returns True/False if the programming language is dynamically typed or not.

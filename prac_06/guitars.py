@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical
-Program that uses the guitar class - Est. 10 minutes
+Program that uses the guitar class - Est. 10 minutes, Actual: 15 minutes
 
 his program should use a list to store all the user's guitars (keep inputting until they enter a blank name), then print their details.
 

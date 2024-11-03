@@ -1,5 +1,6 @@
 """
 CP1404/CP5632 Practical
+Language testing - Est. 10 minutes, Actual: 10 minutes
 
 It should return a string like:
 Python, Dynamic Typing, Reflection=True, First appeared in 1991

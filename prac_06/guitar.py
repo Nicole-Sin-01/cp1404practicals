@@ -2,14 +2,6 @@
 CP1404/CP5632 Practical
 Class for guitars - Est. 10 min, Actual: 15 minutes
 
-Remember the string formatting example from prac 2:
-
-name = "Gibson L-5 CES"
-year = 1922
-cost = 16035.40
-print(f"My guitar: {name}, first made in {year}")
-You should notice that we have multiple values to store for one guitar entity: name, year and cost... and that guitars are awesome! What if we owned 9 guitars? We'd want to use a collection like a list... but what would each element in the list be? ... A tuple? A dictionary? No... This is a classic case for a class!
-
 Write a Guitar class that allows you to store one guitar with these fields (attributes):
 
 name
