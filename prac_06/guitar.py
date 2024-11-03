@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical
-Class for guitars - Est. 10 min
+Class for guitars - Est. 10 min, Actual: 15 minutes
 
 Remember the string formatting example from prac 2:
 
