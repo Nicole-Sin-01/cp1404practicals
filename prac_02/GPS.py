@@ -55,4 +55,18 @@ def main():
         print(f"{born_gophers} were born. {dead_gophers} died.")
         print(f"Population: {current_population}")
 
+def get_birthed_gophers(current_population):
+    """Calculate the number of gophers born."""
+    birth_rate = random.uniform(MINIMUM_BIRTH_RATE, MAXIMUM_BIRTH_RATE)
+    return int(current_population * birth_rate)
+
+def get_dead_gophers(current_population):
+    """Calculate the number of gophers that died."""
+    death_rate = random.uniform(MINIMUM_DEATH_RATE, MAXIMUM_DEATH_RATE)
+    return int(current_population * death_rate)
+
+def update_population(current_population, born_gophers, dead_gophers):
+    """Update the current population based on births and deaths."""
+    return current_population + born_gophers - dead_gophers
+
 main()
