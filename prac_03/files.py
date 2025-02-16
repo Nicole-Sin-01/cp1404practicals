@@ -33,3 +33,8 @@ name = input("Enter name: ")
 print(name, file=out_file)
 out_file.close()
 
+# 2) Code that opens name.txt, read it and prints it with Hi
+in_file = open("name.txt", "r")
+name = in_file.read().strip()
+in_file.close()
+print(f"Hi {name}!")
