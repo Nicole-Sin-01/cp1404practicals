@@ -38,3 +38,10 @@ in_file = open("name.txt", "r")
 name = in_file.read().strip()
 in_file.close()
 print(f"Hi {name}!")
+
+# 3) Code that opens numbers.txt, reads the first two numbers, then adds them together and print the sum
+with open("numbers.txt", "r") as in_file:
+    number1 = int(in_file.readline())
+    number2 = int(in_file.readline())
+print(number1 + number2)
+
