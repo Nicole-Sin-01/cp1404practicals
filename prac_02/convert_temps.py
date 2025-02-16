@@ -44,5 +44,16 @@ def fahrenheit_to_celsius(fahrenheit):
     """Convert Fahrenheit to Celsius."""
     return (fahrenheit - 32) * 5.0 / 9.0
 
+def read_temperatures(filename):
+    """Read temperatures from a file."""
+    with open(filename, "r") as file:
+        return [float(line.strip()) for line in file]
+
+def write_temperatures(temperatures, filename):
+    """Write temperatures to a file."""
+    with open(filename, "w") as file:
+        for temp in temperatures:
+            file.write(f"{temp}\n")
+
 if __name__ == "__main__":
     main()
