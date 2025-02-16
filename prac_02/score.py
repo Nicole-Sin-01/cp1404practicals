@@ -25,5 +25,22 @@ def main():
     random_result = determine_result(random_score)
     print(f"Random score result: {random_result}")
 
+def determine_result(score):
+    """Determine the result based on the score."""
+    if score >= EXCELLENT_THRESHOLD:
+        return "Excellent"
+    elif score >= PASSABLE_THRESHOLD:
+        return "Passable"
+    else:
+        return "Bad"
+
+def get_valid_score():
+    """Prompt the user for a score and validate it."""
+    score = float(input("Enter score: "))
+    while score < MINIMUM_THRESHOLD or score > MAXIMUM_THRESHOLD:
+        print("Invalid score. Please enter a score between 0 and 100.")
+        score = float(input("Enter score: "))
+    return score
+
 if __name__ == "__main__":
     main()
