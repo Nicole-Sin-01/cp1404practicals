@@ -33,5 +33,16 @@ def main():
     celsius_temps = [fahrenheit_to_celsius(temp) for temp in fahrenheit_temps] # Celsius conversion
     write_temperatures(celsius_temps, output_file) # Write Celsius temperatures to output file
 
+def generate_temperatures(filename, count = 15):
+    """Generate random temperatures and save to a file."""
+    with open(filename, "w") as file:
+        for _ in range(count):
+            temperature = random.uniform(-200,200)
+            file.write(f"{temperature}\n")
+
+def fahrenheit_to_celsius(fahrenheit):
+    """Convert Fahrenheit to Celsius."""
+    return (fahrenheit - 32) * 5.0 / 9.0
+
 if __name__ == "__main__":
     main()
