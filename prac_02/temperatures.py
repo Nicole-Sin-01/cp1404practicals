@@ -32,6 +32,13 @@ def main():
     else:
         print("Invalid option. Please enter 'C' or 'F'.")
 
+def celsius_to_fahrenheit(celsius):
+    """Convert Celsius to Fahrenheit."""
+    return celsius * 9.0 / 5.0 + 32
+
+def fahrenheit_to_celsius(fahrenheit):
+    """Convert Fahrenheit to Celsius."""
+    return (fahrenheit - 32) * 5.0 / 9.0
 
 if __name__ == "__main__":
     main()
