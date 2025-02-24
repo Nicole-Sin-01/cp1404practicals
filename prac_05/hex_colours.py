@@ -10,9 +10,9 @@ COLOR_TO_HEX = {"Amethyst": "#9966cc", "DarkOrchid": "#9932cc", "Heliotrope": "#
                 "Thistle": "#d8bfd8"}
 
 print("Hexadecimal Colour Code Lookup")
-print("Please enter a color name to get its hex code.")
+print("Available colours:", ", ".join(COLOR_TO_HEX.keys())) # Lists the names of available colours in the dictionary
 
-color_name = input("Enter color name: ").strip().lower()
+color_name = input("Please enter a color name to get its hex code: ").strip().lower()
 while color_name:
     if color_name in COLOR_TO_HEX:
         print(f"The hex code for {color_name} is {COLOR_TO_HEX[color_name]}")
