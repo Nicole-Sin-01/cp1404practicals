@@ -11,3 +11,4 @@ COLOR_TO_HEX = {"Amethyst": "#9966cc", "DarkOrchid": "#9932cc", "Heliotrope": "#
 
 print("Hexadecimal Colour Code Lookup")
 print("Please enter a color name to get its hex code.")
+
