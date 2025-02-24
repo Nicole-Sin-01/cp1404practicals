@@ -12,3 +12,12 @@ COLOR_TO_HEX = {"Amethyst": "#9966cc", "DarkOrchid": "#9932cc", "Heliotrope": "#
 print("Hexadecimal Colour Code Lookup")
 print("Please enter a color name to get its hex code.")
 
+color_name = input("Enter color name: ").strip().lower()
+while color_name:
+    if color_name in COLOR_TO_HEX:
+        print(f"The hex code for {color_name} is {COLOR_TO_HEX[color_name]}")
+    else:
+        print("Invalid color name. Please try again.")
+    color_name = input("Enter color name: ").strip().lower()
+
+print("Goodbye!")
