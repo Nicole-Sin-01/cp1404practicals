@@ -40,14 +40,19 @@ Your output should then look something like:
 
 def main():
     user_text = input("Text: ").strip()
-
     words = user_text.split()
     word_counts = get_word_count(words)
 
+    max_word_length = max(len(word) for word in word_counts) # Find the longest word for formatting
+
+    for word in sorted(word_counts):
+        print(f"{word:{max_word_length}} : {word_counts[word]}") # Print the words, alphabetically sorted and aligned
+
 def get_word_count(words):
+    """Counts occurrences of words in a list and returns a dictionary."""
     word_to_count = {}
     for word in words:
         word_to_count[word] = word_to_count.get(word, 0) + 1
-        print(word, word_to_count[word])
+    return word_to_count
 
 main()
