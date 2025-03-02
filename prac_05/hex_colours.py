@@ -2,6 +2,9 @@
 CP1404/CP5632 Practical
 Hexadecimal Colour Code Lookup
 Allows the user to look up hexadecimal codes for common color names.
+
+Estimated: 5 minutes
+Actual: 15 minutes
 """
 
 # Dictionary of color names and their corresponding hex codes

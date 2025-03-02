@@ -2,6 +2,9 @@
 CP1404/CP5632 Practical
 State names in a dictionary
 File needs reformatting
+
+Estimated: 1 minute
+Actual: 3 minutes
 """
 
 # Reformat this file so the dictionary code follows PEP 8 convention
