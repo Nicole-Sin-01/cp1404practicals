@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 Wimbledon File Processing
 Estimate: 10 minutes
-Actual:  minutes
+Actual: 10 minutes
 
 Remember to include your estimate and actual time in the module docstring.
 
@@ -42,6 +42,13 @@ AUS, CRO, ESP, FRG, GBR, GER, NED, SRB, SUI, SWE, TCH, USA
 
 """
 
+def main():
+    filename = "wimbledon.csv"
+    data = read_wimbledon_data(filename)
+    champion_to_wins = count_champions(data)
+    countries = get_unique_countries(data)
+    display_results(champion_to_wins, countries)
+
 def read_wimbledon_data(filename):
     """Read CSV file and return data as a list of lists."""
     with open(filename, "r", encoding="utf-8-sig") as file:
@@ -69,3 +76,5 @@ def display_results(champion_to_wins, countries):
 
     print("\nThese {} countries have won Wimbledon:".format(len(countries)))
     print(", ".join(countries))
+
+main()
