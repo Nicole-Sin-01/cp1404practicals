@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 Emails Program
 Estimate: 5 minutes
-Actual:  minutes
+Actual: 5 minutes
 
 Write a program that stores users' emails (unique keys) and names (values) in a dictionary.
 Remember to use our naming convention for dictionaries, key_to_value.
