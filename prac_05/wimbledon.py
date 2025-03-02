@@ -55,3 +55,17 @@ def count_champions(data):
         champion = row[2]
         champion_to_wins[champion] = champion_to_wins.get(champion, 0) + 1
     return champion_to_wins
+
+def get_unique_countries(data):
+    """Extract unique countries of champions and return them as a sorted set."""
+    countries = {row[1] for row in data}  # Set to store unique countries
+    return sorted(countries)
+
+def display_results(champion_to_wins, countries):
+    """Display champions and their win counts, along with unique countries."""
+    print("Wimbledon Champions:")
+    for champion, wins in sorted(champion_to_wins.items()):
+        print(f"{champion} {wins}")
+
+    print("\nThese {} countries have won Wimbledon:".format(len(countries)))
+    print(", ".join(countries))
