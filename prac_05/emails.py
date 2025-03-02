@@ -22,7 +22,23 @@ def main():
 
     email = input("Email: ").strip()
     while email:
-        email_to_name[email] = None  # Placeholder for now
+        name = extract_name(email)
+        confirmation = input(f"Is your name {name}? (Y/n) ").strip().lower()
+        if confirmation and confirmation != 'y':
+            name = input("Name: ").strip()
+
+        email_to_name[email] = name
         email = input("Email: ").strip()
+
+    # Print stored emails and names
+    for email, name in email_to_name.items():
+        print(f"{name} ({email})")
+
+def extract_name(email):
+    """Extracts a name from an email address."""
+    username = email.split('@')[0]  # Get the part before '@'
+    name_parts = username.split('.')  # Split by dots
+    name = " ".join(name_parts).title()  # Capitalize properly
+    return name
 
 main()
