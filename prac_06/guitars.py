@@ -14,3 +14,23 @@ End the program.
 
 from prac_06.guitar import Guitar
 
+def main():
+    """Main function to run the guitar collection program."""
+    guitars = []
+    print("My guitars!")
+
+def get_guitar():
+    """Get user input for guitars and store them in a list."""
+    guitars = []
+    while True:
+        name = input("Name: ")
+        if name == "":
+            break # When user leaves name blank, stops the program and gather final results
+        year = int(input("Year: "))
+        cost = float(input("Cost: $"))
+        new_guitar = Guitar(name, year, cost)
+        guitars.append(new_guitar)
+        print(f"{new_guitar} added.\n")
+    return guitars
+
+main()
