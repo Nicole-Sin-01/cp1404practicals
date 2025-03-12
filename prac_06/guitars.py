@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 Guitar Collection Program
 Estimate: 10 minutes
-Actual:
+Actual: 10 minutes
 
 Start the program and print a greeting.
 Ask the user for guitar details (name, year, cost) in a loop until they enter a blank name.
@@ -18,6 +18,9 @@ def main():
     """Main function to run the guitar collection program."""
     guitars = []
     print("My guitars!")
+
+    guitars = get_guitar()
+    display_guitars(guitars)
 
 def get_guitar():
     """Get user input for guitars and store them in a list."""
