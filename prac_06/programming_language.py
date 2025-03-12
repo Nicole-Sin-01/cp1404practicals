@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 Programming Language Class
 Estimate: 5 minutes
-Actual:
+Actual: 3 minutes
 """
 
 class ProgrammingLanguage:
