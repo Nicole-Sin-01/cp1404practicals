@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 Programming Language Program
 Estimate: 5 minutes
-Actual:
+Actual: 5 minutes
 """
 
 from prac_06.programming_language import ProgrammingLanguage
