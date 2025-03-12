@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 Guitar Class
 Estimate: 7 minutes
-Actual:
+Actual: 4 minutes
 
 Define the following methods:
 __init__ - with defaults name="", year=0, cost=0
