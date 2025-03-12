@@ -13,6 +13,14 @@ def main():
     ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
     visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
 
-    print(python)
+    # print(python) # Test the string representation
+    get_dynamic([python, ruby, visual_basic])
+
+def get_dynamic(languages):
+    """Print the dynamically typed languages from the given list."""
+    print("The dynamically typed languages are:")
+    for language in languages:
+        if language.is_dynamic():
+            print(language.name)
 
 main()
