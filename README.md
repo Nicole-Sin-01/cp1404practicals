@@ -1,5 +1,5 @@
 # ╔═════ஓ๑♡๑ஓ═════╗
-# ...CP1404 Practicals...
+# . . . CP1404 Practicals . . . 
 # ╚═════ஓ๑♡๑ஓ═════╝
 
 ## ˗ˏˋ ꒰ ♡ About This Repository ♡ ꒱ ˎˊ˗ 
